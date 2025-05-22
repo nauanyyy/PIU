@@ -1,6 +1,6 @@
-function Card({ nome, imagem, onClick }) {
+function Card({ nome, imagem, aoClicar }) {
     return (
-      <div onClick={onClick} className="card">
+      <div className="card" onClick={aoClicar}>
         <img src={imagem} alt={nome} />
         <h3>{nome}</h3>
       </div>
