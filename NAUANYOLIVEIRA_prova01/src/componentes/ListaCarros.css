@@ -1,0 +1,15 @@
+.lista-carros {
+    padding: 20px;
+    border: 1px solid #aaa;
+    border-radius: 12px;
+}
+  
+.lista-carros ul {
+    list-style: none;
+    padding-left: 0;
+}
+  
+.lista-carros li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}

@@ -1,0 +1,35 @@
+.contador {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+  
+/*Css normal para os botões.*/
+.botao {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+/*Css para quando o valor da contagem for maior do que 10, aumentar.*/
+.botao.positivo {
+    padding: 10px 30px;
+    font-size: 30px;
+}
+  
+/*Css para quando o valor da contagem for negativo, diminuir.*/
+.botao.negativo {
+    padding: 5px 5px;
+    font-size: 10px;
+}
