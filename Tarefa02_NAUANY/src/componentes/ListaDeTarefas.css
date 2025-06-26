@@ -1,0 +1,47 @@
+.tarefa-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #420080;
+    border-radius: 12px;
+    color: #c395ff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    font-family: sans-serif;
+  }
+  
+  input {
+    width: 70%;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #6c5ce7;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #a29bfe;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  li {
+    background-color: #c395ff;
+    color: #6c5ce7;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 6px;
+  }
