@@ -1,25 +1,41 @@
 import React, { useState } from 'react';
-import './ListaDeTarefas.css';
+import '../componentes/ListaDeTarefas.css';
 
-function ListaDeTarefas() {
+export default function ListaDeTarefas() {
   const [tarefa, setTarefa] = useState('');
   const [lista, setLista] = useState([]);
 
-  function handleChange(event) {
-    setTarefa(event.target.value);
+  function handleChange(e) {
+    setTarefa(e.target.value);
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    if (tarefa.trim() !== '') {
-      setLista([...lista, tarefa]);
-      setTarefa('');
-    }
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (tarefa.trim() === '') return;
+    const nova = { texto: tarefa, status: 'pendente' };
+    setLista([...lista, nova]);
+    setTarefa('');
+  }
+
+  function alterarStatus(index, status) {
+    const novaLista = [...lista];
+    novaLista[index].status = status;
+    setLista(novaLista);
+  }
+
+  function mover(index, direcao) {
+    const novoIndex = index + direcao;
+    if (novoIndex < 0 || novoIndex >= lista.length) return;
+    const novaLista = [...lista];
+    const temp = novaLista[index];
+    novaLista[index] = novaLista[novoIndex];
+    novaLista[novoIndex] = temp;
+    setLista(novaLista);
   }
 
   return (
     <div className="tarefa-container">
-      <h2>Minha Lista de Tarefas</h2>
+      <h2>Gerenciador de Tarefas</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -29,13 +45,24 @@ function ListaDeTarefas() {
         />
         <button type="submit">Adicionar</button>
       </form>
+
       <ul>
         {lista.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index} className="item-tarefa">
+            <div className="botoes-mover">
+              <button onClick={() => mover(index, -1)}>↑</button>
+              <button onClick={() => mover(index, 1)}>↓</button>
+            </div>
+            <span>{item.texto} - <strong>{item.status}</strong></span>
+            <div className="botoes-status">
+              <button onClick={() => alterarStatus(index, 'pendente')}>Pendente</button>
+              <button onClick={() => alterarStatus(index, 'realizada')}>Realizada</button>
+              <button onClick={() => alterarStatus(index, 'não realizada')}>Não Realizada</button>
+            </div>
+          </li>
         ))}
       </ul>
     </div>
   );
 }
 
-export default ListaDeTarefas;
