@@ -1,0 +1,74 @@
+.prova {
+    padding: 25px 30px;
+    background-color: #dac4fd;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 40px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 12px rgba(100, 100, 100, 0.15);
+    color: #333;
+    margin-left: 100px;
+}
+  
+.prova input {
+    padding: 10px 12px;
+    margin-right: 12px;
+    width: 200px;
+    border-radius: 6px;
+    border: 2px solid #a0a0a0;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+  
+.prova input::placeholder {
+    color: #666666;
+    opacity: 1;
+}
+  
+.prova input:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(108, 99, 255, 0.4);
+}
+  
+.prova button {
+    padding: 10px 18px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+  
+.prova button:hover {
+    background-color: #574fd6;
+}
+  
+.prova ul {
+    margin-top: 25px;
+    list-style: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+  
+.prova li {
+    background-color: #fff;
+    margin-bottom: 12px;
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #444;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease;
+}
+  
+.prova li:hover {
+    background-color: #f0f0ff;
+}
